@@ -21,7 +21,7 @@ pipeline {
       stage('Running Container') {
           steps {
             sh 'docker run -d -p 8081:8081 --name nexus sonatype/nexus3'
-            
+            sh 'docker run -d -p 9000:9000 --name sonarqube sonarqube'
           }
       }
    }
